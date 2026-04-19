@@ -321,8 +321,8 @@ export function Homepage() {
   return (
     <main id="top" className="overflow-x-hidden bg-white text-[var(--hm-ink)]">
       <header className="px-4 pt-6 sm:px-6 xl:px-8">
-        <div className="mx-auto max-w-[1320px] rounded-[3rem] border border-[var(--hm-line)] bg-white">
-          <div className="flex flex-col gap-4 px-4 py-4 lg:h-[100px] lg:flex-row lg:items-center lg:justify-between lg:px-10">
+        <div className="mx-auto w-fit rounded-[3rem] border border-[var(--hm-line)] bg-white">
+          <div className="flex flex-col gap-4 px-4 py-4 lg:h-[100px] lg:flex-row lg:items-center lg:justify-start lg:px-10">
             <a href="#top" className="block w-[7rem] sm:w-[8rem]">
               <BrandMark />
             </a>
@@ -367,9 +367,9 @@ export function Homepage() {
               />
             </div>
 
-            <div className="relative mt-8 overflow-hidden rounded-[100px] bg-[var(--hm-soft)] px-8 py-6">
+            <div className="relative mt-8 overflow-hidden rounded-[100px] bg-[var(--hm-soft)] px-8 py-6 xl:w-[200%] xl:max-w-none xl:px-16 xl:py-10">
               <HeartbeatLine className="pointer-events-none absolute bottom-[-2.5rem] right-[-0.5rem] hidden w-[39rem] text-[var(--hm-orange)]/15 lg:block" />
-              <div className="relative flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
+              <div className="relative flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-3">
                 <p className="max-w-[8rem] text-[1.3rem] font-extrabold leading-6 text-[var(--hm-ink)]">
                   Tải HelpMe miễn phí
                 </p>
@@ -532,7 +532,7 @@ export function Homepage() {
           </div>
 
           <div
-            className="mt-10 overflow-hidden rounded-[20px] border border-[var(--hm-line)] p-8"
+            className="mt-16 overflow-hidden rounded-[20px] border border-[var(--hm-line)] p-14"
             style={{
               backgroundImage:
                 "linear-gradient(45deg, rgba(217,217,217,0.55) 25%, transparent 25%), linear-gradient(-45deg, rgba(217,217,217,0.55) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(217,217,217,0.55) 75%), linear-gradient(-45deg, transparent 75%, rgba(217,217,217,0.55) 75%)",
@@ -552,7 +552,7 @@ export function Homepage() {
             </div>
           </div>
 
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-2 text-center text-[1.45rem] font-extrabold text-[var(--hm-ink)]">
+          <div className="mt-16 flex flex-wrap items-center justify-center gap-2 text-center text-[1.45rem] font-extrabold text-[var(--hm-ink)]">
             <span>Bạn vẫn còn thắc mắc?</span>
             <a
               href="#faq"
