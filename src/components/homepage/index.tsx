@@ -206,7 +206,7 @@ function StoreButton({
     store === "google" ? (
       <GooglePlayMark className="size-[1.55rem]" />
     ) : (
-      <AppleMark className="size-[1.55rem]" />
+      <AppleMark className="size-[3rem]" />
     );
 
   return (
@@ -485,14 +485,14 @@ export function Homepage() {
             Ba cách nhận diện. Một <span className="text-[var(--hm-orange)]">mục đích</span> duy nhất.
           </h2>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-start">
+          <div className="mt-11 grid gap-6 lg:grid-cols-[auto_auto] lg:items-start lg:justify-center">
             <svg
               aria-hidden="true"
               viewBox="0 0 652 24"
-              className="hidden h-6 w-[41rem] max-w-full text-[var(--hm-orange)] lg:block"
+              className="hidden h-17 w-[41rem] max-w-full text-[var(--hm-orange)] lg:block"
             >
               <path
-                d="M0 12h624m0 0-17-11m17 11-17 11"
+                d="M65 12h580m0 0-17-11m17 11-17 11"
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
