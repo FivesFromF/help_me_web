@@ -1,13 +1,9 @@
 {
   "name": "help-me-web-monorepo",
   "private": true,
-  "workspaces": [
-    "landing-page",
-    "admin-dashboard"
-  ],
   "scripts": {
-    "landing:dev": "npm run dev -w landing-page",
-    "admin:dev": "npm run dev -w admin-dashboard",
-    "install-all": "npm install"
+    "landing:dev": "cd landing-page && npm run dev",
+    "admin:dev": "cd admin-dashboard && npm run dev",
+    "install-all": "npm --prefix landing-page install && npm --prefix admin-dashboard install"
   }
 }
