@@ -343,36 +343,73 @@ function FaqSection() {
 function PartnerSection() {
   return (
     <section id="partner" className="px-4 pb-0 pt-3 scroll-mt-20 sm:px-6 xl:px-8">
-      <div className="mx-auto overflow-hidden rounded-[20px] border border-[var(--hm-line)] bg-[#050505]">
-        <div className="grid min-h-[26rem] xl:grid-cols-[minmax(0,1fr)_minmax(0,0.98fr)]">
-          <div className="relative overflow-hidden px-8 py-12 text-white sm:px-12 lg:px-[4.6rem] lg:py-[4.45rem]">
-            <div className="pointer-events-none absolute inset-y-[-22%] right-[-17%] hidden aspect-square w-[33rem] rounded-full border-[5.5rem] border-[rgba(255,240,227,0.95)] xl:block" />
-            <div className="relative z-10">
-              <h2 className="max-w-[48rem] text-[clamp(2.8rem,4.5vw,4rem)] font-extrabold leading-[1.14] tracking-[-0.045em] text-white">
-                Đừng phó mặc cho <span className="text-[var(--hm-orange)]">rủi ro</span>.
-              </h2>
-              <p className="mt-6 max-w-[44rem] text-[1.5rem] leading-[1.45] text-white/82">
-                Chuẩn bị hồ sơ y tế khẩn cấp ngay hôm nay để tự bảo vệ chính mình và những người thân yêu.
-              </p>
+      <div className="mx-auto max-w-[1792px] overflow-hidden rounded-[20px] border border-[var(--hm-line)] bg-white">
+        <div className="relative px-8 py-12 sm:px-12 lg:hidden">
+          <h2 className="max-w-[48rem] text-[clamp(2.8rem,4.5vw,4rem)] font-extrabold leading-[1.14] tracking-[-0.045em] text-[var(--hm-ink)]">
+            Đừng phó mặc cho <span className="text-[var(--hm-orange)]">rủi ro</span>.
+          </h2>
+          <p className="mt-6 max-w-[44rem] text-[1.5rem] leading-[1.45] text-[var(--hm-ink)]">
+            Chuẩn bị hồ sơ y tế khẩn cấp ngay hôm nay để tự bảo vệ chính mình và những người thân yêu.
+          </p>
 
-              <div className="mt-12 flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-[1.875rem]">
-                <p className="text-[1.5rem] font-extrabold leading-none text-white/92">Tải HelpMe miễn phí</p>
-                <StoreButton store="google" href="#footer" border className="min-w-[14.25rem]" />
-                <StoreButton store="apple" href="#footer" border className="min-w-[12rem]" />
-              </div>
-            </div>
+          <div className="mt-12 flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-[1.875rem]">
+            <p className="text-[1.5rem] font-extrabold leading-none text-[var(--hm-ink)]">Tải HelpMe miễn phí</p>
+            <StoreButton store="google" href="#footer" border className="min-w-[14.25rem]" />
+            <StoreButton store="apple" href="#footer" border className="min-w-[12rem]" />
           </div>
 
-          <div className="relative min-h-[22rem] overflow-hidden lg:min-h-[27rem]">
-            <div className="absolute inset-y-[-32%] left-[-28%] hidden aspect-square w-[34rem] rounded-full bg-[rgba(255,240,227,0.42)] xl:block" />
-            <div className="absolute inset-y-[-32%] left-[-17%] hidden aspect-square w-[34rem] rounded-full bg-[rgba(255,240,227,0.9)] xl:block" />
+          <div className="relative mt-10 h-[16rem] overflow-hidden rounded-[24px]">
             <Image
               alt="Gia đình quây quần bên nhau"
               src="/family-photo.jpg"
               fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover object-center"
             />
+          </div>
+        </div>
+
+        <div className="relative hidden h-[441px] overflow-hidden lg:block">
+          <div className="pointer-events-none absolute left-[735px] top-[-246px] size-[988px] rounded-full bg-[rgba(255,240,227,0.5)]" />
+          <div className="pointer-events-none absolute left-[854px] top-[-246px] size-[988px] rounded-full bg-[var(--hm-soft)]" />
+
+          <div className="pointer-events-none absolute left-[962px] top-[-217px] size-[931px] overflow-hidden rounded-full">
+            <div className="absolute inset-0 rounded-full bg-[linear-gradient(195.5deg,rgba(255,119,0,0.1)_0%,rgba(255,255,255,0.15)_99.8747%)]" />
+          </div>
+
+          <div className="pointer-events-none absolute left-[950px] top-[-1px] h-[586px] w-[879px] overflow-hidden rounded-[77px]">
+            <div
+              className="absolute inset-0 overflow-hidden rounded-[77px]"
+              style={{
+                WebkitMaskImage:
+                  "radial-gradient(circle 465.5px at 477.5px 249.5px, #000 99.8%, transparent 100%)",
+                maskImage:
+                  "radial-gradient(circle 465.5px at 477.5px 249.5px, #000 99.8%, transparent 100%)",
+              }}
+            >
+              <Image
+                alt="Gia đình quây quần bên nhau"
+                src="/family-photo.jpg"
+                fill
+                sizes="(max-width: 1280px) 50vw, 879px"
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
+
+          <div className="absolute left-[120px] top-[109px] max-w-[48rem]">
+            <h2 className="text-[64px] font-extrabold leading-[1.12] tracking-[-0.045em] text-[var(--hm-ink)]">
+              Đừng phó mặc cho <span className="text-[var(--hm-orange)]">rủi ro</span>.
+            </h2>
+            <p className="mt-6 w-[718px] max-w-full text-[1.5rem] leading-[1.45] text-[var(--hm-ink)]">
+              Chuẩn bị hồ sơ y tế khẩn cấp ngay hôm nay để tự bảo vệ chính mình và những người thân yêu.
+            </p>
+          </div>
+
+          <div className="absolute left-[120px] top-[318px] flex items-center gap-[30px]">
+            <p className="text-[1.5rem] font-extrabold leading-none text-[var(--hm-ink)]">Tải HelpMe miễn phí</p>
+            <StoreButton store="google" href="#footer" border className="min-w-[14.25rem]" />
+            <StoreButton store="apple" href="#footer" border className="min-w-[12rem]" />
           </div>
         </div>
       </div>
