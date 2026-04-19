@@ -2,25 +2,40 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #3d3d3d;
+  --hm-orange: #ff7700;
+  --hm-green: #00bd84;
+  --hm-soft: #fff0e3;
+  --hm-ink: #3d3d3d;
+  --hm-muted: #6f6f6f;
+  --hm-line: #dddddd;
+  --hm-focus-blue: #4975e9;
+  --hm-focus-green: #34c759;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Segoe UI", system-ui, sans-serif;
+  --font-sans: "Nunito", "Segoe UI", "Trebuchet MS", system-ui, sans-serif;
   --font-mono: "Cascadia Code", "Consolas", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--hm-orange) 18%, white);
+  color: var(--hm-ink);
+}
+
+.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
 }
