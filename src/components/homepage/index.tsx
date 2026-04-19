@@ -242,7 +242,7 @@ function HeroInfo({
   );
 }
 
-function PhoneMockup({
+function HeroPhoneImage({
   src,
   alt,
   className,
@@ -254,23 +254,32 @@ function PhoneMockup({
   priority?: boolean;
 }) {
   return (
-    <div
-      className={cx(
-        "relative rounded-[3rem] border-[9px] border-[#cfcfcf] bg-[#f9f9f9] p-3 shadow-[0_28px_60px_-24px_rgba(61,61,61,0.38)]",
-        className,
-      )}
-    >
-      <div className="absolute left-1/2 top-3 h-6 w-28 -translate-x-1/2 rounded-b-[1rem] bg-[#1c1c1c]" />
-      <div className="relative h-full overflow-hidden rounded-[2.4rem] border border-white/60">
-        <Image
-          alt={alt}
-          src={src}
-          fill
-          priority={priority}
-          sizes="(max-width: 1024px) 42vw, 24vw"
-          className="object-cover"
-        />
-      </div>
+    <div className={cx("relative", className)}>
+      <Image
+        alt={alt}
+        src={src}
+        width={1400}
+        height={2400}
+        priority={priority}
+        sizes="(max-width: 1024px) 42vw, 24vw"
+        className="h-auto w-full object-contain drop-shadow-[0_32px_72px_rgba(18,18,18,0.22)]"
+      />
+    </div>
+  );
+}
+
+function HeroPhoneCollage() {
+  return (
+    <div className="relative mx-auto aspect-[3314/3464] w-full max-w-[41rem] sm:max-w-[45rem] xl:mr-0 xl:max-w-[52rem]">
+      <Image
+        alt="HelpMe hero phones collage"
+        src="/hero-frame-410.png"
+        width={3314}
+        height={3464}
+        priority
+        sizes="(max-width: 640px) 84vw, (max-width: 1280px) 42vw, 32vw"
+        className="h-auto w-full object-contain drop-shadow-[0_32px_72px_rgba(18,18,18,0.22)]"
+      />
     </div>
   );
 }
@@ -372,21 +381,8 @@ export function Homepage() {
             </div>
           </div>
 
-          <div className="relative flex min-h-[26rem] items-center justify-center xl:min-h-[54rem] xl:justify-end">
-            <div className="relative flex w-full max-w-[52rem] items-end justify-center lg:justify-end">
-              <PhoneMockup
-                src="/iphone-home.png"
-                alt="Màn hình ứng dụng HelpMe màu cam"
-                priority
-                className="relative z-10 aspect-[323/670] w-[14rem] translate-x-6 translate-y-8 rotate-[-12deg] sm:w-[16rem] xl:w-[20rem]"
-              />
-              <PhoneMockup
-                src="/iphone-scan.png"
-                alt="Màn hình ứng dụng HelpMe quét nhận diện"
-                priority
-                className="relative z-20 -ml-4 aspect-[388/803] w-[16rem] rotate-[11deg] sm:w-[19rem] xl:-ml-3 xl:w-[24rem]"
-              />
-            </div>
+          <div className="relative flex min-h-[26rem] items-center justify-center py-4 xl:min-h-[54rem] xl:justify-end xl:py-0">
+            <HeroPhoneCollage />
           </div>
         </div>
       </section>
