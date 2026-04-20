@@ -83,30 +83,30 @@ function HeaderSection() {
 
 function HeroSection() {
   return (
-    <section className="px-4 pb-4 pt-8 sm:px-6 xl:px-8">
-      <div className="mx-auto grid max-w-[1792px] gap-8 xl:grid-cols-[minmax(0,1012px)_minmax(0,828px)] xl:items-center xl:justify-between">
-        <div className="pt-4 lg:pl-[3.9rem]">
-          <h1 className="max-w-[880px] text-[clamp(2.35rem,9.8vw,6rem)] font-extrabold leading-[1.06] tracking-[-0.04em] text-[var(--hm-ink)] sm:leading-[1.08] sm:tracking-[-0.05em]">
+    <section className="px-4 pb-4 pt-12 sm:px-6 xl:px-8">
+      <div className="mx-auto grid max-w-[1792px] gap-10 xl:grid-cols-[minmax(0,1012px)_minmax(0,828px)] xl:items-center xl:justify-between">
+        <div className="pt-4 lg:pl-[3.9rem] flex flex-col items-center xl:items-start text-center xl:text-left">
+          <h1 className="max-w-[880px] text-[clamp(2.5rem,8vw,6rem)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--hm-ink)] sm:leading-[1.08] sm:tracking-[-0.05em]">
             <span className="block">Tai nạn ngỡ ngàng,</span>
             <span className="block">thông tin y tế</span>
             <span className="block italic text-[var(--hm-orange)]">vẫn luôn sẵn sàng.</span>
           </h1>
 
-          <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-[minmax(0,466px)_1px_minmax(0,346px)] sm:items-start sm:gap-6">
+          <div className="mt-8 grid w-full max-w-[466px] gap-6 text-left sm:mt-10 sm:max-w-none sm:grid-cols-[minmax(0,466px)_1px_minmax(0,346px)] sm:items-start xl:gap-8">
             <HeroInfo
-              icon={<IdentificationCardIcon className="size-[3rem] sm:size-[3.8rem]" />}
+              icon={<IdentificationCardIcon className="size-[2.8rem] sm:size-[3.8rem]" />}
               title="Định danh tức thì"
               description="Cung cấp ngay thông tin nhóm máu, dị ứng và bệnh nền qua nhận diện khuôn mặt, QR hoặc thẻ chạm."
             />
             <div className="h-px w-full bg-[var(--hm-line)] sm:h-full sm:w-px" />
             <HeroInfo
-              icon={<AmbulanceIcon className="size-[3rem] sm:size-[3.8rem]" />}
+              icon={<AmbulanceIcon className="size-[2.8rem] sm:size-[3.8rem]" />}
               title="Báo tin khẩn cấp"
               description="Tích hợp phím tắt khẩn cấp, thao tác nhanh để gửi tọa độ và tình trạng của bạn đến người thân."
             />
           </div>
 
-          <div className="relative mt-8 hidden w-full overflow-hidden rounded-[28px] bg-[var(--hm-soft)] px-5 py-5 sm:rounded-[100px] sm:px-8 sm:py-6 lg:block lg:-ml-16 lg:w-[140%] xl:-ml-24 xl:w-[220%] xl:translate-x-8 xl:max-w-none xl:px-16 xl:py-10">
+          <div className="relative mt-10 hidden w-full overflow-hidden rounded-[28px] bg-[var(--hm-soft)] px-5 py-5 sm:rounded-[100px] sm:px-8 sm:py-6 lg:block lg:-ml-16 lg:w-[140%] xl:-ml-24 xl:w-[220%] xl:translate-x-8 xl:max-w-none xl:px-16 xl:py-10">
             <HeartbeatLine className="pointer-events-none absolute bottom-[-2.5rem] right-[-0.5rem] hidden w-[39rem] text-[var(--hm-orange)]/15 lg:block" />
             <div className="relative flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-3">
               <p className="max-w-none text-[1.15rem] font-extrabold leading-6 text-[var(--hm-ink)] sm:max-w-[8rem] sm:text-[1.3rem]">
@@ -141,47 +141,47 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section id="about" className="relative isolate min-h-[1158px] px-4 pt-40 pb-56 scroll-mt-20 sm:px-6 xl:px-8">
+    <section id="about" className="relative isolate min-h-[1158px] px-4 pt-20 pb-20 scroll-mt-20 sm:px-6 sm:pt-32 sm:pb-32 xl:px-8 xl:pt-40 xl:pb-56">
       <div className="pointer-events-none absolute inset-0 -z-10 mx-auto w-full max-w-[1717px]">
-        <PersonCircleIcon className="absolute left-[-12rem] top-40 size-[30rem] text-[var(--hm-soft)] xl:left-[-27.375rem] xl:top-0 xl:size-[62.5rem]" />
-        <ClockIcon className="absolute right-[-10rem] top-80 size-[28rem] text-[rgba(0,189,132,0.08)] xl:right-[-24.5rem] xl:top-48 xl:size-[62.5rem]" />
+        <PersonCircleIcon className="absolute left-[-6rem] top-20 size-[18rem] text-[var(--hm-soft)] sm:left-[-12rem] sm:top-40 sm:size-[30rem] xl:left-[-27.375rem] xl:top-0 xl:size-[62.5rem]" />
+        <ClockIcon className="absolute right-[-4rem] top-60 size-[16rem] text-[rgba(0,189,132,0.08)] sm:right-[-10rem] sm:top-80 sm:size-[28rem] xl:right-[-24.5rem] xl:top-48 xl:size-[62.5rem]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1717px]">
-        <div className="grid gap-16 xl:grid-cols-[minmax(0,962px)_minmax(0,755px)] xl:justify-between">
+        <div className="grid gap-12 sm:gap-16 xl:grid-cols-[minmax(0,962px)_minmax(0,755px)] xl:justify-between">
           <div>
-            <h2 className="max-w-[1147px] text-[clamp(2.7rem,4.5vw,4rem)] font-extrabold leading-[1.18] tracking-[-0.045em]">
+            <h2 className="max-w-[1147px] text-[clamp(2.2rem,4.5vw,4rem)] font-extrabold leading-[1.2] tracking-[-0.04em] text-center xl:text-left">
               Mỗi năm, hàng nghìn chuyện đáng tiếc xảy ra chỉ vì{" "}
-              <span className="text-[var(--hm-orange)]">thông tin không đến kịp</span>.
+              <span className="text-[var(--hm-orange)] block sm:inline">thông tin không đến kịp</span>.
             </h2>
 
-            <div className="mt-16">
-              <p className="text-[2rem] font-extrabold text-[var(--hm-orange)]">Vấn đề</p>
-              <div className="mt-5 space-y-6">
-                <div className="flex gap-4">
-                  <div className="mt-1 flex size-10 items-center justify-center text-[var(--hm-orange)]">
-                    <EyeClosedIcon className="size-9" />
+            <div className="mt-12 sm:mt-16 bg-white/60 p-6 rounded-2xl shadow-sm backdrop-blur-sm xl:bg-transparent xl:p-0 xl:shadow-none xl:backdrop-blur-none">
+              <p className="text-[1.75rem] font-extrabold text-[var(--hm-orange)] text-center xl:text-left sm:text-[2rem]">Vấn đề</p>
+              <div className="mt-6 space-y-6 sm:mt-8 sm:space-y-8">
+                <div className="flex gap-4 sm:gap-6 items-start">
+                  <div className="mt-1 flex size-10 shrink-0 items-center justify-center text-[var(--hm-orange)]">
+                    <EyeClosedIcon className="size-8 sm:size-9" />
                   </div>
-                  <p className="max-w-[42rem] text-[1.45rem] leading-[1.6] text-[var(--hm-ink)]">
+                  <p className="max-w-[42rem] text-[1.15rem] leading-[1.5] text-[var(--hm-ink)] sm:text-[1.45rem] sm:leading-[1.6]">
                     <span className="font-extrabold">Nạn nhân bất tỉnh</span>, không thể cung cấp nhóm máu hay tiền sử dị ứng.
                   </p>
                 </div>
 
-                <div className="flex gap-4 border-t border-[var(--hm-line)] pt-6">
-                  <div className="mt-1 flex size-10 items-center justify-center text-[var(--hm-orange)]">
-                    <PhoneBreakIcon className="size-9" />
+                <div className="flex gap-4 sm:gap-6 items-start border-t border-[var(--hm-line)]/50 pt-6 sm:pt-8">
+                  <div className="mt-1 flex size-10 shrink-0 items-center justify-center text-[var(--hm-orange)]">
+                    <PhoneBreakIcon className="size-8 sm:size-9" />
                   </div>
-                  <p className="max-w-[42rem] text-[1.45rem] leading-[1.6] text-[var(--hm-ink)]">
+                  <p className="max-w-[42rem] text-[1.15rem] leading-[1.5] text-[var(--hm-ink)] sm:text-[1.45rem] sm:leading-[1.6]">
                     Điện thoại vỡ nát hoặc sập nguồn sau va chạm,{" "}
                     <span className="font-extrabold">cắt đứt mọi kênh liên lạc</span>.
                   </p>
                 </div>
 
-                <div className="flex gap-4 pt-1">
-                  <div className="mt-1 flex size-10 items-center justify-center text-[var(--hm-orange)]">
-                    <ClockCountdownIcon className="size-9" />
+                <div className="flex gap-4 sm:gap-6 items-start border-t border-[var(--hm-line)]/50 pt-6 sm:pt-8">
+                  <div className="mt-1 flex size-10 shrink-0 items-center justify-center text-[var(--hm-orange)]">
+                    <ClockCountdownIcon className="size-8 sm:size-9" />
                   </div>
-                  <p className="max-w-[42rem] text-[1.45rem] leading-[1.6] text-[var(--hm-ink)]">
+                  <p className="max-w-[42rem] text-[1.15rem] leading-[1.5] text-[var(--hm-ink)] sm:text-[1.45rem] sm:leading-[1.6]">
                     Bác sĩ cấp cứu <span className="font-extrabold">đánh mất &quot;thời gian vàng&quot;</span> để dò hỏi thông tin cơ bản.
                   </p>
                 </div>
@@ -236,13 +236,13 @@ function AboutSection() {
 
 function RecognitionSection() {
   return (
-    <section className="bg-[rgba(255,240,227,0.5)] px-4 pt-40 pb-56 sm:px-6 xl:px-8">
+    <section className="bg-[rgba(255,240,227,0.5)] px-4 pt-24 pb-32 sm:px-6 sm:pt-40 sm:pb-56 xl:px-8">
       <div className="mx-auto max-w-[1635px]">
-        <h2 className="text-center text-[clamp(2.7rem,4.5vw,4rem)] font-extrabold leading-[1.18] tracking-[-0.045em]">
-          Ba cách nhận diện. Một <span className="text-[var(--hm-orange)]">mục đích</span> duy nhất.
+        <h2 className="text-center text-[clamp(2.2rem,8vw,4rem)] font-extrabold leading-[1.15] tracking-[-0.04em]">
+          Ba cách nhận diện. <span className="block sm:inline">Một <span className="text-[var(--hm-orange)]">mục đích</span> duy nhất.</span>
         </h2>
 
-        <div className="mt-11 grid gap-6 lg:grid-cols-[auto_auto] lg:items-start lg:justify-center">
+        <div className="mt-10 grid gap-6 lg:mt-11 lg:grid-cols-[auto_auto] lg:items-start lg:justify-center">
           <svg
             aria-hidden="true"
             viewBox="0 0 652 24"
@@ -256,17 +256,17 @@ function RecognitionSection() {
               strokeWidth="4"
             />
           </svg>
-          <p className="max-w-[38rem] text-[1.4rem] leading-[1.5] text-[var(--hm-muted)]">
+          <p className="max-w-none text-center text-[1.25rem] leading-[1.6] text-[var(--hm-muted)] sm:max-w-[38rem] sm:text-left sm:text-[1.4rem] lg:leading-[1.5]">
             Tạo điều kiện để <span className="font-extrabold text-[var(--hm-ink)]">bất cứ ai</span> cũng có thể hỗ trợ bạn, giúp thông tin y tế luôn được truyền đi{" "}
             <span className="font-extrabold text-[var(--hm-ink)]">kịp thời</span> nhất.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:gap-8 lg:mt-12 lg:grid-cols-3">
           {featureCards.map((card) => (
-            <article key={card.title} className="rounded-[20px] bg-white px-7 pb-8 pt-[17rem]">
-              <h3 className="text-[2rem] font-extrabold leading-tight text-[var(--hm-ink)]">{card.title}</h3>
-              <p className="mt-3 text-[1.25rem] leading-[1.55] text-[var(--hm-muted)]">{card.description}</p>
+            <article key={card.title} className="rounded-[20px] bg-white px-6 pb-8 pt-[12rem] sm:px-7 sm:pt-[17rem] shadow-sm">
+              <h3 className="text-[1.75rem] font-extrabold leading-[1.2] text-[var(--hm-ink)] sm:text-[2rem] sm:leading-tight">{card.title}</h3>
+              <p className="mt-3 text-[1.15rem] leading-[1.6] text-[var(--hm-muted)] sm:text-[1.25rem] sm:leading-[1.55]">{card.description}</p>
             </article>
           ))}
         </div>
@@ -277,45 +277,45 @@ function RecognitionSection() {
 
 function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="px-4 py-24 scroll-mt-20 sm:px-6 xl:px-8">
+    <section id="how-it-works" className="px-4 py-16 scroll-mt-20 sm:px-6 sm:py-24 xl:px-8">
       <div className="mx-auto max-w-[1468px]">
-        <h2 className="text-center text-[clamp(2.7rem,4.5vw,4rem)] font-extrabold leading-[1.18] tracking-[-0.045em]">
-          Bảo vệ bạn chỉ với <span className="text-[var(--hm-green)]">5 bước</span>.
+        <h2 className="text-center text-[clamp(2.2rem,8vw,4rem)] font-extrabold leading-[1.15] tracking-[-0.04em]">
+          Bảo vệ bạn <span className="block sm:inline">chỉ với <span className="text-[var(--hm-green)]">5 bước</span>.</span>
         </h2>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:gap-5 xl:grid-cols-5">
           {steps.map((step) => (
             <StepCard key={step.number} {...step} />
           ))}
         </div>
 
         <div
-          className="mt-16 overflow-hidden rounded-[20px] border border-[var(--hm-line)] p-5 sm:p-14 [background-position:0_0,0_28px,28px_-28px,-28px_0] [background-size:56px_56px] sm:[background-position:0_0,0_48px,48px_-48px,-48px_0] sm:[background-size:96px_96px]"
+          className="mt-10 overflow-hidden rounded-[20px] border border-[var(--hm-line)] p-4 sm:mt-16 sm:p-14 [background-position:0_0,0_28px,28px_-28px,-28px_0] [background-size:56px_56px] sm:[background-position:0_0,0_48px,48px_-48px,-48px_0] sm:[background-size:96px_96px]"
           style={{
             backgroundImage:
               "linear-gradient(45deg, rgba(217,217,217,0.55) 25%, transparent 25%), linear-gradient(-45deg, rgba(217,217,217,0.55) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(217,217,217,0.55) 75%), linear-gradient(-45deg, transparent 75%, rgba(217,217,217,0.55) 75%)",
             backgroundColor: "#ffffff",
           }}
         >
-          <div className="flex min-h-[7.5rem] items-center justify-center sm:min-h-[11rem]">
+          <div className="flex min-h-[8.5rem] items-center justify-center sm:min-h-[11rem]">
             <a
               href="#about"
-              className="inline-flex h-[58px] w-full max-w-[25rem] items-center justify-center gap-3 rounded-full border border-[var(--hm-line)] bg-white px-6 text-[1.45rem] font-extrabold text-[var(--hm-orange)] whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2 sm:h-[62px] sm:px-8"
+              className="inline-flex h-[54px] w-full max-w-[22rem] items-center justify-center gap-2 rounded-full border border-[var(--hm-line)] bg-white px-5 text-[1.25rem] font-extrabold text-[var(--hm-orange)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2 sm:h-[62px] sm:max-w-[25rem] sm:gap-3 sm:px-8 sm:text-[1.45rem]"
             >
-              <PlayTriangleIcon className="size-6" />
-              <span className="whitespace-nowrap">Xem cách HelpMe hoạt động</span>
+              <PlayTriangleIcon className="size-5 sm:size-6 shrink-0" />
+              <span className="whitespace-nowrap truncate">Xem cách HelpMe hoạt động</span>
             </a>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-center gap-2 text-center text-[1.45rem] font-extrabold text-[var(--hm-ink)] sm:flex-row sm:flex-wrap">
+        <div className="mt-12 flex flex-col items-center justify-center gap-2 text-center text-[1.25rem] font-extrabold text-[var(--hm-ink)] sm:mt-16 sm:flex-row sm:flex-wrap sm:text-[1.45rem]">
           <span>Bạn vẫn còn thắc mắc?</span>
           <a
             href="#faq"
-            className="inline-flex items-center gap-2 whitespace-nowrap text-[var(--hm-green)] underline decoration-[10%] underline-offset-[0.18em] transition-colors duration-200 hover:text-[var(--hm-orange)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap text-[var(--hm-green)] underline decoration-[10%] underline-offset-[0.18em] transition-colors duration-200 hover:text-[var(--hm-orange)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2 sm:gap-2"
           >
             <span>Xem hướng dẫn chi tiết</span>
-            <ExternalArrowIcon className="size-6" />
+            <ExternalArrowIcon className="size-5 sm:size-6 shrink-0" />
           </a>
         </div>
       </div>
@@ -367,44 +367,42 @@ function PartnerSection() {
   return (
     <section id="partner" className="px-4 pb-0 pt-3 scroll-mt-20 sm:px-6 xl:px-8">
       <div className="mx-auto max-w-[1792px] overflow-hidden rounded-[20px] border border-[var(--hm-line)] bg-white">
-        <div className="relative px-5 pb-8 pt-8 sm:px-10 lg:hidden">
-          <h2 className="max-w-[27rem] text-[clamp(2.45rem,9.6vw,3.8rem)] font-extrabold leading-[1.12] tracking-[-0.04em] text-[var(--hm-ink)]">
-            Đừng phó mặc cho <span className="text-[var(--hm-orange)]">rủi ro</span>.
+        <div className="relative px-5 pb-8 pt-8 sm:px-10 lg:hidden flex flex-col items-center text-center">
+          <h2 className="max-w-[27rem] text-[clamp(2.2rem,8vw,3.8rem)] font-extrabold leading-[1.15] tracking-[-0.04em] text-[var(--hm-ink)]">
+            Đừng phó mặc cho <span className="text-[var(--hm-orange)] block">rủi ro</span>.
           </h2>
 
-          <p className="mt-5 max-w-[34rem] text-[1.9rem] leading-[1.35] text-[var(--hm-ink)]">
+          <p className="mt-5 max-w-[28rem] text-[1.35rem] leading-[1.5] text-[var(--hm-ink)] sm:text-[1.6rem]">
             Chuẩn bị hồ sơ y tế khẩn cấp ngay hôm nay để tự bảo vệ chính mình và những người thân yêu.
           </p>
 
-          <div className="mt-8">
-            <p className="text-[2.05rem] font-extrabold leading-none text-[var(--hm-ink)]">Tải HelpMe miễn phí</p>
-            <div className="mt-4 grid max-w-[28rem] grid-cols-2 gap-4">
+          <div className="mt-8 flex flex-col items-center w-full">
+            <p className="text-[1.65rem] font-extrabold leading-none text-[var(--hm-ink)] mb-4">Tải HelpMe miễn phí</p>
+            <div className="flex flex-wrap justify-center gap-3 w-full sm:max-w-md">
               <StoreButton
                 store="google"
                 href="#footer"
                 border
-                className="h-[50px] w-full min-w-0 px-3 text-[1.45rem]"
+                className="h-[50px] flex-1 min-w-[140px] px-4 text-[1.2rem] font-bold"
               />
               <StoreButton
                 store="apple"
                 href="#footer"
                 border
-                className="h-[50px] w-full min-w-0 px-3 text-[1.45rem]"
+                className="h-[50px] flex-1 min-w-[140px] px-4 text-[1.2rem] font-bold"
               />
             </div>
           </div>
 
-          <div className="relative mt-9 h-[28.5rem] overflow-hidden rounded-[24px]">
-            <div className="pointer-events-none absolute left-1/2 top-[0.9rem] h-[15.2rem] w-[176%] -translate-x-1/2 rounded-[50%] bg-[rgba(255,240,227,0.88)]" />
-            <div className="pointer-events-none absolute left-1/2 top-[5.1rem] h-[14.8rem] w-[154%] -translate-x-1/2 rounded-[50%] bg-[rgba(255,240,227,0.66)]" />
-
-            <div className="absolute inset-x-0 bottom-0 h-[22.5rem] overflow-hidden rounded-[24px] sm:h-[24rem]">
+          <div className="relative w-full mt-10 h-[22rem] sm:h-[30rem] overflow-hidden rounded-[24px]">
+            <div className="pointer-events-none absolute left-1/2 top-4 h-full w-[150%] -translate-x-1/2 rounded-[50%] bg-[var(--hm-soft)] opacity-80" />
+            <div className="absolute inset-x-0 bottom-0 h-full overflow-hidden rounded-[24px]">
               <Image
                 alt="Gia đình quây quần bên nhau"
                 src="/family-photo.jpg"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-center"
+                className="object-cover object-top"
               />
             </div>
           </div>
