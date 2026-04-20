@@ -92,13 +92,13 @@ function HeroSection() {
             <span className="block italic text-[var(--hm-orange)]">vẫn luôn sẵn sàng.</span>
           </h1>
 
-          <div className="mt-6 grid gap-6 sm:mt-8 sm:grid-cols-[minmax(0,466px)_1px_minmax(0,346px)] sm:items-start sm:gap-6">
+          <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-[minmax(0,466px)_1px_minmax(0,346px)] sm:items-start sm:gap-6">
             <HeroInfo
               icon={<IdentificationCardIcon className="size-[3rem] sm:size-[3.8rem]" />}
               title="Định danh tức thì"
               description="Cung cấp ngay thông tin nhóm máu, dị ứng và bệnh nền qua nhận diện khuôn mặt, QR hoặc thẻ chạm."
             />
-            <div className="hidden h-full w-px bg-[var(--hm-line)] sm:block" />
+            <div className="h-px w-full bg-[var(--hm-line)] sm:h-full sm:w-px" />
             <HeroInfo
               icon={<AmbulanceIcon className="size-[3rem] sm:size-[3.8rem]" />}
               title="Báo tin khẩn cấp"
@@ -106,7 +106,7 @@ function HeroSection() {
             />
           </div>
 
-          <div className="relative mt-8 w-full overflow-hidden rounded-[28px] bg-[var(--hm-soft)] px-5 py-5 sm:rounded-[100px] sm:px-8 sm:py-6 lg:-ml-16 lg:w-[140%] xl:-ml-24 xl:w-[220%] xl:translate-x-8 xl:max-w-none xl:px-16 xl:py-10">
+          <div className="relative mt-8 hidden w-full overflow-hidden rounded-[28px] bg-[var(--hm-soft)] px-5 py-5 sm:rounded-[100px] sm:px-8 sm:py-6 lg:block lg:-ml-16 lg:w-[140%] xl:-ml-24 xl:w-[220%] xl:translate-x-8 xl:max-w-none xl:px-16 xl:py-10">
             <HeartbeatLine className="pointer-events-none absolute bottom-[-2.5rem] right-[-0.5rem] hidden w-[39rem] text-[var(--hm-orange)]/15 lg:block" />
             <div className="relative flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-3">
               <p className="max-w-none text-[1.15rem] font-extrabold leading-6 text-[var(--hm-ink)] sm:max-w-[8rem] sm:text-[1.3rem]">
@@ -120,8 +120,19 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="relative flex min-h-[26rem] items-center justify-center py-4 xl:min-h-[54rem] xl:justify-end xl:py-0">
-          <HeroPhoneCollage />
+        <div className="relative flex min-h-[26rem] flex-col items-center justify-center py-4 xl:min-h-[54rem] xl:justify-end xl:py-0">
+          <div className="relative flex w-full justify-center">
+            <HeartbeatLine className="pointer-events-none absolute bottom-[2.2rem] left-1/2 w-[128%] -translate-x-1/2 text-[var(--hm-orange)]/10 lg:hidden" />
+            <HeroPhoneCollage className="relative z-10" />
+          </div>
+
+          <div className="mt-9 flex w-full flex-col items-center gap-3 lg:hidden">
+            <p className="text-center text-[1.65rem] font-extrabold leading-none text-[var(--hm-ink)]">Tải HelpMe miễn phí</p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <StoreButton store="google" href="#footer" border className="h-[44px] min-w-[10.5rem] px-3 text-[1.2rem] font-bold tracking-[-0.02em]" />
+              <StoreButton store="apple" href="#footer" border className="h-[44px] min-w-[10.5rem] px-3 text-[1.2rem] font-bold tracking-[-0.02em]" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -279,34 +290,32 @@ function HowItWorksSection() {
         </div>
 
         <div
-          className="mt-16 overflow-hidden rounded-[20px] border border-[var(--hm-line)] p-14"
+          className="mt-16 overflow-hidden rounded-[20px] border border-[var(--hm-line)] p-5 sm:p-14 [background-position:0_0,0_28px,28px_-28px,-28px_0] [background-size:56px_56px] sm:[background-position:0_0,0_48px,48px_-48px,-48px_0] sm:[background-size:96px_96px]"
           style={{
             backgroundImage:
               "linear-gradient(45deg, rgba(217,217,217,0.55) 25%, transparent 25%), linear-gradient(-45deg, rgba(217,217,217,0.55) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(217,217,217,0.55) 75%), linear-gradient(-45deg, transparent 75%, rgba(217,217,217,0.55) 75%)",
-            backgroundPosition: "0 0, 0 48px, 48px -48px, -48px 0px",
-            backgroundSize: "96px 96px",
             backgroundColor: "#ffffff",
           }}
         >
-          <div className="flex min-h-[11rem] items-center justify-center">
+          <div className="flex min-h-[7.5rem] items-center justify-center sm:min-h-[11rem]">
             <a
               href="#about"
-              className="inline-flex h-[62px] items-center gap-3 rounded-full border border-[var(--hm-line)] bg-white px-8 text-[1.45rem] font-extrabold text-[var(--hm-orange)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2"
+              className="inline-flex h-[58px] w-full max-w-[25rem] items-center justify-center gap-3 rounded-full border border-[var(--hm-line)] bg-white px-6 text-[1.45rem] font-extrabold text-[var(--hm-orange)] whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2 sm:h-[62px] sm:px-8"
             >
               <PlayTriangleIcon className="size-6" />
-              <span>Xem cách HelpMe hoạt động</span>
+              <span className="whitespace-nowrap">Xem cách HelpMe hoạt động</span>
             </a>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-2 text-center text-[1.45rem] font-extrabold text-[var(--hm-ink)]">
+        <div className="mt-16 flex flex-col items-center justify-center gap-2 text-center text-[1.45rem] font-extrabold text-[var(--hm-ink)] sm:flex-row sm:flex-wrap">
           <span>Bạn vẫn còn thắc mắc?</span>
           <a
             href="#faq"
-            className="inline-flex items-center gap-1 text-[var(--hm-green)] underline decoration-[10%] underline-offset-[0.18em] transition-colors duration-200 hover:text-[var(--hm-orange)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2"
+            className="inline-flex items-center gap-2 whitespace-nowrap text-[var(--hm-green)] underline decoration-[10%] underline-offset-[0.18em] transition-colors duration-200 hover:text-[var(--hm-orange)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2"
           >
             <span>Xem hướng dẫn chi tiết</span>
-            <ExternalArrowIcon className="size-5" />
+            <ExternalArrowIcon className="size-6" />
           </a>
         </div>
       </div>
@@ -358,28 +367,46 @@ function PartnerSection() {
   return (
     <section id="partner" className="px-4 pb-0 pt-3 scroll-mt-20 sm:px-6 xl:px-8">
       <div className="mx-auto max-w-[1792px] overflow-hidden rounded-[20px] border border-[var(--hm-line)] bg-white">
-        <div className="relative px-8 py-12 sm:px-12 lg:hidden">
-          <h2 className="max-w-[48rem] text-[clamp(2.8rem,4.5vw,4rem)] font-extrabold leading-[1.14] tracking-[-0.045em] text-[var(--hm-ink)]">
+        <div className="relative px-5 pb-8 pt-8 sm:px-10 lg:hidden">
+          <h2 className="max-w-[27rem] text-[clamp(2.45rem,9.6vw,3.8rem)] font-extrabold leading-[1.12] tracking-[-0.04em] text-[var(--hm-ink)]">
             Đừng phó mặc cho <span className="text-[var(--hm-orange)]">rủi ro</span>.
           </h2>
-          <p className="mt-6 max-w-[44rem] text-[1.5rem] leading-[1.45] text-[var(--hm-ink)]">
+
+          <p className="mt-5 max-w-[34rem] text-[1.9rem] leading-[1.35] text-[var(--hm-ink)]">
             Chuẩn bị hồ sơ y tế khẩn cấp ngay hôm nay để tự bảo vệ chính mình và những người thân yêu.
           </p>
 
-          <div className="mt-12 flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-[1.875rem]">
-            <p className="text-[1.5rem] font-extrabold leading-none text-[var(--hm-ink)]">Tải HelpMe miễn phí</p>
-            <StoreButton store="google" href="#footer" border className="min-w-[14.25rem]" />
-            <StoreButton store="apple" href="#footer" border className="min-w-[12rem]" />
+          <div className="mt-8">
+            <p className="text-[2.05rem] font-extrabold leading-none text-[var(--hm-ink)]">Tải HelpMe miễn phí</p>
+            <div className="mt-4 grid max-w-[28rem] grid-cols-2 gap-4">
+              <StoreButton
+                store="google"
+                href="#footer"
+                border
+                className="h-[50px] w-full min-w-0 px-3 text-[1.45rem]"
+              />
+              <StoreButton
+                store="apple"
+                href="#footer"
+                border
+                className="h-[50px] w-full min-w-0 px-3 text-[1.45rem]"
+              />
+            </div>
           </div>
 
-          <div className="relative mt-10 h-[16rem] overflow-hidden rounded-[24px]">
-            <Image
-              alt="Gia đình quây quần bên nhau"
-              src="/family-photo.jpg"
-              fill
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              className="object-cover object-center"
-            />
+          <div className="relative mt-9 h-[28.5rem] overflow-hidden rounded-[24px]">
+            <div className="pointer-events-none absolute left-1/2 top-[0.9rem] h-[15.2rem] w-[176%] -translate-x-1/2 rounded-[50%] bg-[rgba(255,240,227,0.88)]" />
+            <div className="pointer-events-none absolute left-1/2 top-[5.1rem] h-[14.8rem] w-[154%] -translate-x-1/2 rounded-[50%] bg-[rgba(255,240,227,0.66)]" />
+
+            <div className="absolute inset-x-0 bottom-0 h-[22.5rem] overflow-hidden rounded-[24px] sm:h-[24rem]">
+              <Image
+                alt="Gia đình quây quần bên nhau"
+                src="/family-photo.jpg"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover object-center"
+              />
+            </div>
           </div>
         </div>
 
