@@ -94,7 +94,7 @@ function HeroSection() {
             />
           </div>
 
-          <div className="relative mt-8 overflow-hidden rounded-[100px] bg-[var(--hm-soft)] px-8 py-6 xl:w-[200%] xl:max-w-none xl:px-16 xl:py-10">
+          <div className="relative -ml-16 mt-8 overflow-hidden rounded-[100px] bg-[var(--hm-soft)] px-8 py-6 sm:-ml-10 sm:w-[120%] lg:-ml-16 lg:w-[140%] xl:-ml-24 xl:w-[220%] xl:translate-x-8 xl:max-w-none xl:px-16 xl:py-10">
             <HeartbeatLine className="pointer-events-none absolute bottom-[-2.5rem] right-[-0.5rem] hidden w-[39rem] text-[var(--hm-orange)]/15 lg:block" />
             <div className="relative flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-3">
               <p className="max-w-[8rem] text-[1.3rem] font-extrabold leading-6 text-[var(--hm-ink)]">
@@ -118,11 +118,11 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section id="about" className="relative overflow-hidden px-4 py-24 scroll-mt-20 sm:px-6 xl:px-8">
-      <PersonCircleIcon className="absolute left-[-12rem] top-8 size-[30rem] text-[var(--hm-soft)] opacity-85" />
-      <ClockIcon className="absolute right-[-10rem] top-10 size-[28rem] text-[rgba(0,189,132,0.08)]" />
+    <section id="about" className="relative isolate min-h-[1158px] px-4 pt-40 pb-56 scroll-mt-20 sm:px-6 xl:px-8">
+      <PersonCircleIcon className="pointer-events-none absolute left-[-12rem] top-40 -z-10 size-[30rem] text-[var(--hm-soft)] xl:left-[-27.375rem] xl:top-0 xl:size-[62.5rem]" />
+      <ClockIcon className="pointer-events-none absolute right-[-10rem] top-80 -z-10 size-[28rem] text-[rgba(0,189,132,0.08)] xl:right-[-24.5rem] xl:top-48 xl:size-[62.5rem]" />
 
-      <div className="mx-auto max-w-[1717px]">
+      <div className="relative z-10 mx-auto max-w-[1717px]">
         <div className="grid gap-16 xl:grid-cols-[minmax(0,962px)_minmax(0,755px)] xl:justify-between">
           <div>
             <h2 className="max-w-[1147px] text-[clamp(2.7rem,4.5vw,4rem)] font-extrabold leading-[1.18] tracking-[-0.045em]">
@@ -211,7 +211,7 @@ function AboutSection() {
 
 function RecognitionSection() {
   return (
-    <section className="bg-[rgba(255,240,227,0.5)] px-4 py-24 sm:px-6 xl:px-8">
+    <section className="bg-[rgba(255,240,227,0.5)] px-4 pt-40 pb-56 sm:px-6 xl:px-8">
       <div className="mx-auto max-w-[1635px]">
         <h2 className="text-center text-[clamp(2.7rem,4.5vw,4rem)] font-extrabold leading-[1.18] tracking-[-0.045em]">
           Ba cách nhận diện. Một <span className="text-[var(--hm-orange)]">mục đích</span> duy nhất.

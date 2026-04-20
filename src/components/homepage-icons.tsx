@@ -1,4 +1,28 @@
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import {
+  Ambulance as PhAmbulance,
+  ArrowSquareOut as PhArrowSquareOut,
+  ArrowUp as PhArrowUp,
+  CaretDown as PhCaretDown,
+  Checks as PhChecks,
+  Clock as PhClock,
+  ClockCountdown as PhClockCountdown,
+  ContactlessPayment as PhContactlessPayment,
+  DeviceMobile as PhDeviceMobile,
+  Envelope as PhEnvelope,
+  EyeClosed as PhEyeClosed,
+  FirstAidKit as PhFirstAidKit,
+  Handshake as PhHandshake,
+  Heartbeat as PhHeartbeat,
+  House as PhHouse,
+  IdentificationCard as PhIdentificationCard,
+  MapPin as PhMapPin,
+  PersonSimpleCircle as PhPersonSimpleCircle,
+  PhoneCall as PhPhoneCall,
+  PhoneX as PhPhoneX,
+  Play as PhPlay,
+  ScanSmiley as PhScanSmiley,
+} from "@phosphor-icons/react/dist/ssr";
 
 type IconProps = ComponentPropsWithoutRef<"svg">;
 
@@ -32,398 +56,87 @@ function BaseIcon({
 }
 
 export function HomeIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M4.5 13.5 16 4.5l11.5 9v13a1 1 0 0 1-1 1h-7.5v-8h-6v8H5.5a1 1 0 0 1-1-1v-13Z"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.25"
-      />
-    </BaseIcon>
-  );
+  return <PhHouse aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function DeviceMobileIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <rect
-        x="9"
-        y="3.5"
-        width="14"
-        height="25"
-        rx="3"
-        stroke="currentColor"
-        strokeWidth="2.2"
-      />
-      <path
-        d="M13 6.8h6"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2.2"
-      />
-      <circle cx="16" cy="24.2" r="1.4" fill="currentColor" />
-    </BaseIcon>
-  );
+  return <PhDeviceMobile aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function HeartbeatIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M15.9 27.2 6.7 18A7 7 0 0 1 16 8.2 7 7 0 0 1 25.3 18l-9.4 9.2Z"
-        stroke="currentColor"
-        strokeLinejoin="round"
-        strokeWidth="2.2"
-      />
-      <path
-        d="M7.8 16.2h4.3l1.8-3.1 2.5 6 2.4-4h5.4"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.2"
-      />
-    </BaseIcon>
-  );
+  return <PhHeartbeat aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function HandshakeIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="m4.5 17.5 4.5-4.6a3 3 0 0 1 4.1-.2l2 1.7a2.2 2.2 0 0 0 2.8 0l2-1.7a3 3 0 0 1 4.1.2l3.5 3.6"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.1"
-      />
-      <path
-        d="m7.8 20.3 3 3a2.3 2.3 0 0 0 3.2 0l1-1 1 1a2.3 2.3 0 0 0 3.2 0l1.1-1.1.6.6a2.2 2.2 0 0 0 3.1 0l2.4-2.5"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.1"
-      />
-      <path
-        d="m11.5 16 2.7 2.3a3.7 3.7 0 0 0 4.8 0L21.3 16"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.1"
-      />
-    </BaseIcon>
-  );
+  return <PhHandshake aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function IdentificationCardIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <rect
-        x="4"
-        y="6"
-        width="24"
-        height="20"
-        rx="3"
-        stroke="currentColor"
-        strokeWidth="2.2"
-      />
-      <circle cx="11" cy="14" r="3" stroke="currentColor" strokeWidth="2.2" />
-      <path
-        d="M7.8 21c.9-1.9 2.5-2.9 4.2-2.9s3.3 1 4.2 2.9M18.5 12h6M18.5 18h6"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2.2"
-      />
-    </BaseIcon>
-  );
+  return <PhIdentificationCard aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function AmbulanceIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M5 10h12v11H5zM17 14h5.3l3.2 3.8V21H17z"
-        stroke="currentColor"
-        strokeLinejoin="round"
-        strokeWidth="2.1"
-      />
-      <path
-        d="M9 14h4M11 12v4M22.3 17.8h2.2"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2.1"
-      />
-      <circle cx="10.2" cy="23.2" r="2.3" stroke="currentColor" strokeWidth="2.1" />
-      <circle cx="22" cy="23.2" r="2.3" stroke="currentColor" strokeWidth="2.1" />
-    </BaseIcon>
-  );
+  return <PhAmbulance aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function EyeClosedIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M5 16c2.4-3 5.8-4.5 11-4.5S24.6 13 27 16"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2.1"
-      />
-      <path
-        d="m6.2 9.6 2.3 2.8M12 7.2l1.4 3.3M20 7.2l-1.4 3.3M25.8 9.6l-2.3 2.8M10.2 21.3l1.8-2.8M21.8 21.3 20 18.5"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2.1"
-      />
-    </BaseIcon>
-  );
+  return <PhEyeClosed aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function PhoneBreakIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M9.2 6.4c1-.7 2-.8 2.9-.1l2.1 2a2.4 2.4 0 0 1 .4 3l-1.4 2 5.4 5.4 2-1.4a2.4 2.4 0 0 1 3 .4l2 2.1c.7.8.6 1.9-.1 2.9-1 1.3-2.4 2.2-4 2.2-3.6 0-8.2-3-12.4-7.1S3.9 9.9 3.9 6.3c0-1.6.8-3 2.2-4Z"
-        stroke="currentColor"
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
-      <path
-        d="M24.8 7.2 7.3 24.8"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2.2"
-      />
-    </BaseIcon>
-  );
+  return <PhPhoneX aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function ClockCountdownIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <circle cx="16" cy="18" r="9.5" stroke="currentColor" strokeWidth="2.1" />
-      <path
-        d="M16 12.5v6l4 2.3M20.6 6.8h6"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.1"
-      />
-      <path
-        d="m23.5 3.8 3 3"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2.1"
-      />
-    </BaseIcon>
-  );
+  return <PhClockCountdown aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function CheckDoubleIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="m5.5 16.8 3.6 3.7 6.3-7.4"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.2"
-      />
-      <path
-        d="m14.8 18.6 3 3.1 8-9.4"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.2"
-      />
-    </BaseIcon>
-  );
+  return <PhChecks aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function ScanFaceIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M7 11V7h4M25 11V7h-4M7 21v4h4M25 21v4h-4"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.2"
-      />
-      <circle cx="16" cy="16" r="5.4" stroke="currentColor" strokeWidth="2.2" />
-      <path
-        d="M13.4 17.4c1.6 1.5 3.6 1.5 5.2 0M14 14.4h.1M17.9 14.4h.1"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2.2"
-      />
-    </BaseIcon>
-  );
+  return <PhScanSmiley aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function ContactlessIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <circle cx="11" cy="16" r="4.1" fill="currentColor" />
-      <path
-        d="M18 11.4a6.7 6.7 0 0 1 0 9.2M21.5 8a11.2 11.2 0 0 1 0 16M25 4.8a15.8 15.8 0 0 1 0 22.4"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2.2"
-      />
-    </BaseIcon>
-  );
+  return <PhContactlessPayment aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function FirstAidIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M16 5.2v21.6M5.2 16h21.6"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="4"
-      />
-      <rect
-        x="4.5"
-        y="4.5"
-        width="23"
-        height="23"
-        rx="6"
-        stroke="currentColor"
-        strokeWidth="2"
-      />
-    </BaseIcon>
-  );
+  return <PhFirstAidKit aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function PlayTriangleIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path d="m10 7.8 14.2 8.2L10 24.2V7.8Z" fill="currentColor" />
-    </BaseIcon>
-  );
+  return <PhPlay aria-hidden="true" weight="fill" {...props} />;
 }
 
 export function ExternalArrowIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M20 5h7v7M27 5 15.5 16.5"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.2"
-      />
-      <path
-        d="M23 18.5v4a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 8 22.5v-12A1.5 1.5 0 0 1 9.5 9h4"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.2"
-      />
-    </BaseIcon>
-  );
+  return <PhArrowSquareOut aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function CaretDownIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="m8 12 8 8 8-8"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.2"
-      />
-    </BaseIcon>
-  );
+  return <PhCaretDown aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function MapPinIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M16 27c4.8-5.8 7.2-10.2 7.2-13.3A7.2 7.2 0 1 0 8.8 13.7C8.8 16.8 11.2 21.2 16 27Z"
-        stroke="currentColor"
-        strokeLinejoin="round"
-        strokeWidth="2.1"
-      />
-      <circle cx="16" cy="13.6" r="2.8" fill="currentColor" />
-    </BaseIcon>
-  );
+  return <PhMapPin aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function PersonCircleIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <circle cx="16" cy="16" r="13" stroke="currentColor" strokeWidth="2.1" />
-      <circle cx="16" cy="12" r="4" stroke="currentColor" strokeWidth="2.1" />
-      <path
-        d="M9.8 24c1.5-3.1 4-4.8 6.2-4.8s4.7 1.7 6.2 4.8"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2.1"
-      />
-    </BaseIcon>
-  );
+  return <PhPersonSimpleCircle aria-hidden="true" weight="fill" {...props} />;
 }
 
 export function ClockIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <circle cx="16" cy="16" r="13" stroke="currentColor" strokeWidth="2.1" />
-      <path
-        d="M16 9.5v7l4.8 2.8"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.1"
-      />
-    </BaseIcon>
-  );
+  return <PhClock aria-hidden="true" weight="fill" {...props} />;
 }
 
 export function PhoneCallIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M8.5 6.5c1-.7 2-.8 2.9-.1l2 1.9a2.3 2.3 0 0 1 .4 3l-1.3 1.9c2 3.4 4.7 6 8.1 8l1.9-1.3a2.3 2.3 0 0 1 3 .4l1.9 2c.7.8.6 1.9-.1 2.9-1 1.3-2.4 2.1-3.9 2.1-3.6 0-8.3-2.9-12.5-7.1S4.3 10 4.3 6.5c0-1.6.8-2.9 2.1-4Z"
-        stroke="currentColor"
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
-      <path
-        d="M20.5 6.8a8.6 8.6 0 0 1 4.6 4.7M19.2 10.8a4.2 4.2 0 0 1 2 2"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeWidth="2"
-      />
-    </BaseIcon>
-  );
+  return <PhPhoneCall aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function MailIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <rect
-        x="4.5"
-        y="7"
-        width="23"
-        height="18"
-        rx="2.5"
-        stroke="currentColor"
-        strokeWidth="2.1"
-      />
-      <path
-        d="m6.5 10.5 9.5 7 9.5-7"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.1"
-      />
-    </BaseIcon>
-  );
+  return <PhEnvelope aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function FacebookIcon(props: IconProps) {
@@ -462,17 +175,7 @@ export function YoutubeIcon(props: IconProps) {
 }
 
 export function ArrowUpIcon(props: IconProps) {
-  return (
-    <BaseIcon {...props}>
-      <path
-        d="M16 25V7M8.8 14.2 16 7l7.2 7.2"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2.2"
-      />
-    </BaseIcon>
-  );
+  return <PhArrowUp aria-hidden="true" weight="regular" {...props} />;
 }
 
 export function GooglePlayMark(props: IconProps) {
