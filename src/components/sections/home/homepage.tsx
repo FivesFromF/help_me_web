@@ -472,9 +472,9 @@ function FooterSection() {
             </div>
           </div>
 
-          <div className="grid gap-10">
-            <div className="grid gap-8 md:grid-cols-2">
-              <div className="space-y-5 md:border-r md:border-white/35 md:pr-8">
+          <div className="grid gap-6 lg:gap-8">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1fr_minmax(18rem,1fr)_auto] lg:gap-10">
+              <div className="space-y-5 md:border-r md:border-white/35 md:pr-8 lg:w-[234.766px]">
                 <h3 className="text-[2rem] font-extrabold text-white">Giới thiệu</h3>
                 <a
                   href="#about"
@@ -484,7 +484,7 @@ function FooterSection() {
                 </a>
               </div>
 
-              <div className="space-y-5">
+              <div className="space-y-5 lg:w-[287.766px] lg:-translate-x-[129px]">
                 <h3 className="text-[2rem] font-extrabold text-white">Dành cho đối tác</h3>
                 <a
                   href="#partner"
@@ -493,15 +493,17 @@ function FooterSection() {
                   Hợp tác với HelpMe
                 </a>
               </div>
+
+              <div aria-hidden="true" className="hidden lg:block" />
             </div>
 
-            <div className="grid gap-10 lg:grid-cols-[1fr_1fr_auto]">
+            <div className="grid gap-10 lg:grid-cols-[1fr_minmax(18rem,1fr)_auto]">
               <div className="lg:border-r lg:border-white/35 lg:pr-8">
                 <LinkList title="Liên kết nhanh" links={quickLinks} />
               </div>
 
               <div className="lg:border-r lg:border-white/35 lg:pr-8">
-                <LinkList title="Hỗ trợ & Pháp lý" links={legalLinks} />
+                <LinkList title="Hỗ trợ & Pháp lý" links={legalLinks} titleClassName="lg:whitespace-nowrap" />
               </div>
 
               <div className="space-y-5">
