@@ -43,8 +43,8 @@ import { StoreButton } from "@/components/ui/store-button";
 
 function HeaderSection() {
   return (
-    <header className="px-4 pt-6 sm:px-6 xl:px-8">
-      <div className="mx-auto w-fit rounded-[3rem] border border-[var(--hm-line)] bg-white">
+    <header className="sticky top-0 z-50 px-4 pt-4 sm:px-6 xl:px-8">
+      <div className="mx-auto w-fit rounded-[3rem] border border-[var(--hm-line)] bg-white shadow-[0_8px_24px_rgba(61,61,61,0.08)]">
         <div className="flex flex-col gap-4 px-4 py-4 lg:h-[100px] lg:flex-row lg:items-center lg:justify-start lg:px-10">
           <a href="#top" className="block w-[7rem] sm:w-[8rem]">
             <BrandMark />
@@ -557,7 +557,7 @@ function FooterSection() {
 
 export function Homepage() {
   return (
-    <main id="top" className="overflow-x-hidden bg-white text-[var(--hm-ink)]">
+    <main id="top" className="bg-white text-[var(--hm-ink)]">
       <HeaderSection />
       <HeroSection />
       <AboutSection />
