@@ -23,6 +23,12 @@ export const metadata: Metadata = {
   description:
     "HelpMe giúp truy xuất thông tin y tế khẩn cấp qua nhận diện khuôn mặt, NFC và mã QR để giữ trọn thời gian vàng.",
 };
+// Explicit icon metadata to ensure hosting adapters find the correct favicon
+export const icons = {
+  icon: "/favicon_io/favicon.ico",
+  shortcut: "/favicon_io/favicon-32x32.png",
+  apple: "/favicon_io/apple-touch-icon.png",
+};
 
 export default function RootLayout({
   children,
@@ -34,8 +40,9 @@ export default function RootLayout({
       lang="vi"
       className={`${nunito.variable} ${asap.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col overflow-x-hidden">{children}</body>
+      <body className="min-h-full flex flex-col overflow-x-hidden">
+        {children}
+      </body>
     </html>
   );
 }
-
