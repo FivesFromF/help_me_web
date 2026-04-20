@@ -44,13 +44,25 @@ import { StoreButton } from "@/components/ui/store-button";
 function HeaderSection() {
   return (
     <header className="sticky top-0 z-50 px-4 pt-4 sm:px-6 xl:px-8">
-      <div className="mx-auto w-fit rounded-[3rem] border border-[var(--hm-line)] bg-white shadow-[0_8px_24px_rgba(61,61,61,0.08)]">
-        <div className="flex flex-col gap-4 px-4 py-4 lg:h-[100px] lg:flex-row lg:items-center lg:justify-start lg:px-10">
-          <a href="#top" className="block w-[7rem] sm:w-[8rem]">
+      <div className="mx-auto w-full max-w-[1792px] rounded-[2.2rem] border border-[var(--hm-line)] bg-white shadow-[0_8px_24px_rgba(61,61,61,0.08)] lg:w-fit lg:rounded-[3rem]">
+        <div className="flex items-center justify-between px-4 py-3 lg:h-[100px] lg:gap-4 lg:px-10">
+          <a href="#top" className="block w-[7rem] sm:w-[8rem] lg:w-[8rem]">
             <BrandMark />
           </a>
 
-          <nav className="flex flex-wrap items-center gap-2 lg:gap-[6px]">
+          <button
+            type="button"
+            aria-label="Mở menu điều hướng"
+            className="inline-flex size-11 items-center justify-center rounded-full border border-[var(--hm-line)] text-[var(--hm-ink)] lg:hidden"
+          >
+            <span className="relative block h-4 w-5">
+              <span className="absolute left-0 top-0 h-[2px] w-full rounded bg-current" />
+              <span className="absolute left-0 top-[6px] h-[2px] w-full rounded bg-current" />
+              <span className="absolute left-0 top-[12px] h-[2px] w-full rounded bg-current" />
+            </span>
+          </button>
+
+          <nav className="hidden flex-wrap items-center gap-2 lg:flex lg:gap-[6px]">
             {navLinks.map((link) => (
               <NavPill key={link.label} {...link} />
             ))}
@@ -58,7 +70,7 @@ function HeaderSection() {
 
           <a
             href="#partner"
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--hm-green)] px-6 py-3 text-[1.5rem] font-extrabold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-green)] focus-visible:ring-offset-2"
+            className="hidden items-center gap-2 rounded-full bg-[var(--hm-green)] px-6 py-3 text-[1.5rem] font-extrabold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-green)] focus-visible:ring-offset-2 lg:inline-flex"
           >
             <HandshakeIcon className="size-7" />
             <span>Trở thành đối tác</span>
@@ -74,30 +86,30 @@ function HeroSection() {
     <section className="px-4 pb-4 pt-8 sm:px-6 xl:px-8">
       <div className="mx-auto grid max-w-[1792px] gap-8 xl:grid-cols-[minmax(0,1012px)_minmax(0,828px)] xl:items-center xl:justify-between">
         <div className="pt-4 lg:pl-[3.9rem]">
-          <h1 className="max-w-[880px] text-[clamp(3.75rem,5.4vw,6rem)] font-extrabold leading-[1.08] tracking-[-0.05em] text-[var(--hm-ink)]">
+          <h1 className="max-w-[880px] text-[clamp(2.35rem,9.8vw,6rem)] font-extrabold leading-[1.06] tracking-[-0.04em] text-[var(--hm-ink)] sm:leading-[1.08] sm:tracking-[-0.05em]">
             <span className="block">Tai nạn ngỡ ngàng,</span>
             <span className="block">thông tin y tế</span>
             <span className="block italic text-[var(--hm-orange)]">vẫn luôn sẵn sàng.</span>
           </h1>
 
-          <div className="mt-8 grid gap-8 sm:grid-cols-[minmax(0,466px)_1px_minmax(0,346px)] sm:items-start sm:gap-6">
+          <div className="mt-6 grid gap-6 sm:mt-8 sm:grid-cols-[minmax(0,466px)_1px_minmax(0,346px)] sm:items-start sm:gap-6">
             <HeroInfo
-              icon={<IdentificationCardIcon className="size-[3.8rem]" />}
+              icon={<IdentificationCardIcon className="size-[3rem] sm:size-[3.8rem]" />}
               title="Định danh tức thì"
               description="Cung cấp ngay thông tin nhóm máu, dị ứng và bệnh nền qua nhận diện khuôn mặt, QR hoặc thẻ chạm."
             />
             <div className="hidden h-full w-px bg-[var(--hm-line)] sm:block" />
             <HeroInfo
-              icon={<AmbulanceIcon className="size-[3.8rem]" />}
+              icon={<AmbulanceIcon className="size-[3rem] sm:size-[3.8rem]" />}
               title="Báo tin khẩn cấp"
               description="Tích hợp phím tắt khẩn cấp, thao tác nhanh để gửi tọa độ và tình trạng của bạn đến người thân."
             />
           </div>
 
-          <div className="relative -ml-16 mt-8 overflow-hidden rounded-[100px] bg-[var(--hm-soft)] px-8 py-6 sm:-ml-10 sm:w-[120%] lg:-ml-16 lg:w-[140%] xl:-ml-24 xl:w-[220%] xl:translate-x-8 xl:max-w-none xl:px-16 xl:py-10">
+          <div className="relative mt-8 w-full overflow-hidden rounded-[28px] bg-[var(--hm-soft)] px-5 py-5 sm:rounded-[100px] sm:px-8 sm:py-6 lg:-ml-16 lg:w-[140%] xl:-ml-24 xl:w-[220%] xl:translate-x-8 xl:max-w-none xl:px-16 xl:py-10">
             <HeartbeatLine className="pointer-events-none absolute bottom-[-2.5rem] right-[-0.5rem] hidden w-[39rem] text-[var(--hm-orange)]/15 lg:block" />
             <div className="relative flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-3">
-              <p className="max-w-[8rem] text-[1.3rem] font-extrabold leading-6 text-[var(--hm-ink)]">
+              <p className="max-w-none text-[1.15rem] font-extrabold leading-6 text-[var(--hm-ink)] sm:max-w-[8rem] sm:text-[1.3rem]">
                 Tải HelpMe miễn phí
               </p>
               <div className="flex flex-wrap gap-3">
@@ -561,7 +573,7 @@ function FooterSection() {
 
 export function Homepage() {
   return (
-    <main id="top" className="bg-white text-[var(--hm-ink)]">
+    <main id="top" className="overflow-x-clip bg-white text-[var(--hm-ink)]">
       <HeaderSection />
       <HeroSection />
       <AboutSection />

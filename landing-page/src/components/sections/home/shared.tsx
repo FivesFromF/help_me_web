@@ -44,9 +44,9 @@ export function HeroInfo({
 }) {
   return (
     <div className="pt-2">
-      <div className="mb-4 flex h-[7.125rem] items-center text-[var(--hm-orange)]">{icon}</div>
-      <h3 className="text-[1.5rem] font-extrabold leading-none text-[var(--hm-ink)]">{title}</h3>
-      <p className="mt-3 text-[1.25rem] leading-[1.7] text-[var(--hm-muted)]">{description}</p>
+      <div className="mb-2 flex h-[4.5rem] items-center text-[var(--hm-orange)] sm:mb-4 sm:h-[7.125rem]">{icon}</div>
+      <h3 className="text-[1.15rem] font-extrabold leading-none text-[var(--hm-ink)] sm:text-[1.5rem]">{title}</h3>
+      <p className="mt-2 text-[1rem] leading-[1.55] text-[var(--hm-muted)] sm:mt-3 sm:text-[1.25rem] sm:leading-[1.7]">{description}</p>
     </div>
   );
 }
