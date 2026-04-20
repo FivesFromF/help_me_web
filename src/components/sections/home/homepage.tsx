@@ -119,8 +119,10 @@ function HeroSection() {
 function AboutSection() {
   return (
     <section id="about" className="relative isolate min-h-[1158px] px-4 pt-40 pb-56 scroll-mt-20 sm:px-6 xl:px-8">
-      <PersonCircleIcon className="pointer-events-none absolute left-[-12rem] top-40 -z-10 size-[30rem] text-[var(--hm-soft)] xl:left-[-27.375rem] xl:top-0 xl:size-[62.5rem]" />
-      <ClockIcon className="pointer-events-none absolute right-[-10rem] top-80 -z-10 size-[28rem] text-[rgba(0,189,132,0.08)] xl:right-[-24.5rem] xl:top-48 xl:size-[62.5rem]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 mx-auto w-full max-w-[1717px]">
+        <PersonCircleIcon className="absolute left-[-12rem] top-40 size-[30rem] text-[var(--hm-soft)] xl:left-[-27.375rem] xl:top-0 xl:size-[62.5rem]" />
+        <ClockIcon className="absolute right-[-10rem] top-80 size-[28rem] text-[rgba(0,189,132,0.08)] xl:right-[-24.5rem] xl:top-48 xl:size-[62.5rem]" />
+      </div>
 
       <div className="relative z-10 mx-auto max-w-[1717px]">
         <div className="grid gap-16 xl:grid-cols-[minmax(0,962px)_minmax(0,755px)] xl:justify-between">
