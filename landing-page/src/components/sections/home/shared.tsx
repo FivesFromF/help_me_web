@@ -43,14 +43,14 @@ export function HeroInfo({
   description: string;
 }) {
   return (
-    <div className="pt-1 sm:pt-2">
-      <div className="flex items-start gap-4 sm:block">
-        <div className="mt-1 flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center text-[var(--hm-orange)] sm:mb-4 sm:mt-0 sm:h-[7.125rem] sm:w-auto sm:justify-start">
+    <div className="w-full pt-1 sm:pt-2">
+      <div className="flex items-start gap-3 sm:block sm:gap-4">
+        <div className="mt-0.5 flex h-[64px] w-[64px] shrink-0 items-center justify-center text-[var(--hm-orange)] sm:mb-4 sm:mt-0 sm:h-[7.125rem] sm:w-auto sm:justify-start">
           {icon}
         </div>
         <div className="min-w-0">
-          <h3 className="text-[1.45rem] font-extrabold leading-[1.2] text-[var(--hm-ink)] sm:text-[1.5rem]">{title}</h3>
-          <p className="mt-2 text-[1.2rem] leading-[1.5] text-[var(--hm-muted)] sm:mt-3 sm:text-[1.25rem] sm:leading-[1.7]">{description}</p>
+          <h3 className="text-[16px] font-bold leading-[1.35] text-[var(--hm-ink)] sm:text-[1.5rem] sm:font-extrabold sm:leading-[1.2]">{title}</h3>
+          <p className="mt-1.5 text-[14px] leading-[1.45] text-[var(--hm-muted)] sm:mt-3 sm:text-[1.25rem] sm:leading-[1.7]">{description}</p>
         </div>
       </div>
     </div>
@@ -75,11 +75,11 @@ export function HeroPhoneCollage({ className }: { className?: string }) {
 
 export function StepCard({ number, title, description, icon }: Step) {
   return (
-    <article className="flex h-full flex-col items-center rounded-[20px] border border-[var(--hm-line)] bg-white px-7 py-6 text-center">
-      <div className="flex h-[104px] items-center justify-center">{icon}</div>
-      <p className="mt-2 text-[2rem] font-extrabold text-[var(--hm-line)]">{number}</p>
-      <h3 className="mt-3 text-[2rem] font-extrabold leading-none text-[var(--hm-ink)]">{title}</h3>
-      <p className="mt-4 max-w-[10rem] text-[1.25rem] leading-[1.55] text-[var(--hm-muted)]">
+    <article className="flex h-full min-h-[224px] flex-col items-center rounded-[20px] border border-[var(--hm-line)] bg-white px-4 py-3 text-center xl:px-7 xl:py-6">
+      <div className="flex h-[65px] items-center justify-center xl:h-[104px]">{icon}</div>
+      <p className="mt-1 text-[18px] font-bold leading-none text-[var(--hm-line)] xl:mt-2 xl:text-[2rem] xl:font-extrabold">{number}</p>
+      <h3 className="mt-1 text-[18px] font-bold leading-[1.2] text-[var(--hm-ink)] xl:mt-3 xl:text-[2rem] xl:font-extrabold xl:leading-none">{title}</h3>
+      <p className="mt-2 max-w-[104px] text-[14px] leading-[1.45] text-[var(--hm-muted)] xl:mt-4 xl:max-w-[10rem] xl:text-[1.25rem] xl:leading-[1.55]">
         {description}
       </p>
     </article>
