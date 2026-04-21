@@ -23,7 +23,7 @@ export function StoreButton({
 				? "h-[18px] w-[16px]"
 				: "h-[1.6rem] w-[1.35rem] sm:h-[1.875rem] sm:w-[1.625rem]"
 			: compact
-				? "h-[18px] w-[15px]"
+				? "h-[30px] w-[28px]"
 				: "h-[2.25rem] w-[2.05rem] sm:h-[1.875rem] sm:w-[1.625rem]";
 	const icon =
 		store === "google" ? (
@@ -43,7 +43,7 @@ export function StoreButton({
 			<AppleMark
 				className={
 					compact
-						? "h-[18px] w-[15px]"
+						? "h-[30px] w-[28px]"
 						: "h-[2.55rem] w-[2.3rem] scale-[1.18] sm:h-[54px] sm:w-[50px] sm:scale-100"
 				}
 			/>
