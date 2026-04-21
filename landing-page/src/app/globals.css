@@ -46,3 +46,20 @@ body {
 .faq-item[open] .faq-chevron {
   transform: rotate(180deg);
 }
+
+.mobile-nav-panel {
+  animation: mobile-nav-enter 200ms ease-out both;
+  transform-origin: top center;
+}
+
+@keyframes mobile-nav-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

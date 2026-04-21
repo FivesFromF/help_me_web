@@ -45,36 +45,46 @@ function HeaderSection() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-[var(--hm-line)]/70 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 lg:hidden">
-        <div className="mx-auto flex h-[88px] w-full max-w-[390px] items-center justify-between px-4">
+        <div className="relative mx-auto flex h-[88px] w-full max-w-[390px] items-center justify-between px-4">
           <a href="#top" className="block w-[114px]">
             <BrandMark />
           </a>
 
-          <details className="group relative">
-            <summary className="flex size-11 cursor-pointer list-none items-center justify-center rounded-full border border-[var(--hm-line)] text-[var(--hm-orange)] transition-colors duration-200 hover:border-[var(--hm-orange)] hover:bg-[var(--hm-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2 [&::-webkit-details-marker]:hidden">
+          <details className="group">
+            <summary className="flex h-10 cursor-pointer list-none items-center gap-2 rounded-full border border-[rgba(255,119,0,0.24)] bg-[var(--hm-soft)]/45 px-3 text-[var(--hm-orange)] transition-colors duration-200 hover:border-[var(--hm-orange)] hover:bg-[var(--hm-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2 [&::-webkit-details-marker]:hidden">
               <span className="sr-only">Mở menu điều hướng</span>
-              <span className="relative block h-4 w-5">
-                <span className="absolute left-0 top-0 h-[2px] w-full rounded bg-current transition-transform duration-200 group-open:translate-y-[6px] group-open:rotate-45" />
-                <span className="absolute left-0 top-[6px] h-[2px] w-full rounded bg-current transition-opacity duration-200 group-open:opacity-0" />
-                <span className="absolute left-0 top-[12px] h-[2px] w-full rounded bg-current transition-transform duration-200 group-open:-translate-y-[6px] group-open:-rotate-45" />
+              <span aria-hidden="true" className="text-[13px] font-bold leading-none tracking-[-0.02em]">Menu</span>
+              <span aria-hidden="true" className="relative block h-3.5 w-4">
+                <span className="absolute left-0 top-0 h-[1.7px] w-full rounded-full bg-current transition-transform duration-200 group-open:translate-y-[6px] group-open:rotate-45" />
+                <span className="absolute left-0 top-[6px] h-[1.7px] w-full rounded-full bg-current transition-opacity duration-200 group-open:opacity-0" />
+                <span className="absolute left-0 top-[12px] h-[1.7px] w-full rounded-full bg-current transition-transform duration-200 group-open:-translate-y-[6px] group-open:-rotate-45" />
               </span>
             </summary>
 
-            <div className="absolute right-0 top-[calc(100%+12px)] w-[min(22rem,calc(100vw-2rem))] rounded-[24px] border border-[var(--hm-line)] bg-white p-3 shadow-[0_18px_48px_rgba(61,61,61,0.14)]">
-              <nav className="flex flex-col gap-1.5">
+            <div className="mobile-nav-panel absolute inset-x-0 top-[88px] border-y border-[var(--hm-line)] bg-white/98 shadow-[0_14px_32px_rgba(61,61,61,0.08)] backdrop-blur">
+              <div className="border-b border-[var(--hm-line)]/70 px-4 py-3 text-center">
+                <p className="text-[12px] font-bold uppercase tracking-[0.28em] text-[var(--hm-muted)]">Điều hướng</p>
+              </div>
+
+              <nav className="flex flex-col px-4 py-2">
                 {navLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
-                    className="flex items-center gap-3 rounded-[18px] px-4 py-3 text-[16px] font-bold text-[var(--hm-ink)] transition-colors duration-200 hover:bg-[var(--hm-soft)]/80 hover:text-[var(--hm-orange)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2"
+                    className={[
+                      "flex items-center gap-3 border-b border-[var(--hm-line)]/60 px-1 py-4 text-[15px] font-bold transition-colors duration-200 last:border-b-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-blue)] focus-visible:ring-offset-2",
+                      link.active
+                        ? "text-[var(--hm-orange)]"
+                        : "text-[var(--hm-ink)] hover:text-[var(--hm-orange)]",
+                    ].join(" ")}
                   >
-                    <span className="text-[var(--hm-orange)]">{link.icon}</span>
+                    <span className={link.active ? "text-[var(--hm-orange)]" : "text-[var(--hm-muted)]"}>{link.icon}</span>
                     <span>{link.label}</span>
                   </a>
                 ))}
                 <a
                   href="#partner"
-                  className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--hm-green)] px-5 py-3 text-[16px] font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-green)] focus-visible:ring-offset-2"
+                  className="my-3 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--hm-green)] px-5 py-3 text-[15px] font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--hm-focus-green)] focus-visible:ring-offset-2"
                 >
                   <HandshakeIcon className="size-5" />
                   <span>Trở thành đối tác</span>
@@ -123,7 +133,7 @@ function HeroSection() {
             <span className="block italic text-[var(--hm-orange)]">vẫn luôn sẵn sàng.</span>
           </h1>
 
-          <div className="mx-auto mt-7 flex w-full max-w-[390px] flex-col gap-4 text-left xl:mx-0 xl:mt-8 xl:grid xl:w-full xl:max-w-[466px] xl:grid-cols-[minmax(0,466px)_1px_minmax(0,346px)] xl:items-start xl:gap-8">
+          <div className="mx-auto mt-7 flex w-full max-w-[390px] flex-col gap-4 text-left xl:mx-0 xl:mt-8 xl:grid xl:w-full xl:max-w-[820px] xl:grid-cols-[minmax(0,1fr)_1px_minmax(0,1fr)] xl:items-start xl:gap-10">
             <HeroInfo
               icon={<IdentificationCardIcon className="size-[40px] xl:size-[56px]" />}
               title="Định danh tức thì"
