@@ -37,9 +37,9 @@ export function OverviewSection({
           </p>
 
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
-            <StatusChip label="Admin" detail="quản trị hệ thống" tone="orange" />
-            <StatusChip label="Staff" detail="truy cập có kiểm soát" tone="green" />
-            <StatusChip label="Citizen" detail="theo dõi cờ tin cậy" tone="ink" />
+            <StatusChip label="Admin" detail="Quản trị hệ thống" tone="orange" />
+            <StatusChip label="Staff" detail="Truy cập có kiểm soát" tone="green" />
+            <StatusChip label="Citizen" detail="Theo dõi cờ tin cậy" tone="ink" />
           </div>
         </div>
 
