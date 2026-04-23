@@ -1,7 +1,5 @@
+import { AdminDashboardPage } from "@/components/admin-dashboard/dashboard-page";
+
 export default function Home() {
-  return (
-    <main>
-      <div>Hello world!</div>
-    </main>
-  );
+  return <AdminDashboardPage />;
 }
